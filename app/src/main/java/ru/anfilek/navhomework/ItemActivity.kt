@@ -5,6 +5,9 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class ItemActivity : AppCompatActivity() {
+
+    private val userLogin: UserLogin by lazy { UserLogin(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item)
@@ -13,7 +16,7 @@ class ItemActivity : AppCompatActivity() {
             startMeAgain()
         }
 
-        findViewById<Button>(R.id.startAgainButton).setOnClickListener {
+        findViewById<Button>(R.id.logout).setOnClickListener {
             logout()
         }
     }
@@ -29,6 +32,7 @@ class ItemActivity : AppCompatActivity() {
     }
 
     private fun logout() {
+        userLogin.setUserLoggedOut()
         // go to login screen
         // pay attention to backstack
     }

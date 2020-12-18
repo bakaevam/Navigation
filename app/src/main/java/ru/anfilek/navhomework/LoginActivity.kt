@@ -3,9 +3,11 @@ package ru.anfilek.navhomework
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.random.Random
 
 class LoginActivity : AppCompatActivity() {
+
+    private val userLogin: UserLogin by lazy { UserLogin(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -17,17 +19,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun checkLoginFlow() {
-        if (isUserLoggedIn()) {
+        if (userLogin.isUserLoggedIn()) {
             // close this activity and open ListActivity
         }
     }
 
-    private fun isUserLoggedIn(): Boolean {
-        return Random.nextBoolean()
-    }
-
     private fun performLogin() {
-        // pretend that login is already happened
+        userLogin.setUserLoggedIn()
         // close this activity and open ListActivity
     }
 }
