@@ -3,7 +3,7 @@ Project contains 3 activities: Login, List and item.
 Login screen must be launched first.
 
 If user is already logged in - login screen must be closed and List screen must be opened.
-
+_____________
 
 On the list screen user can use camera feature.
 
@@ -12,8 +12,7 @@ Request permission for camera usage.
 Remember that permission request should be user-friendly. 
 
 When the permission is granted, plese open the CameraActivity(create it, please)
-
-
+_____________
 
 On the ListActivity fabStartSomething must open ItemActivity.
 
@@ -24,11 +23,11 @@ But it should look like the screen is updated and new screen should not be added
 On the ItemActivity logout button must logout user and open Login screen.
 
 Think about user expirience. (Should other activities will be kept in the back stack?)
-
+_____________
 
 
 UserLogin object keeps the info about user login.
-
+_____________
 
 Additional task:
 
