@@ -1,4 +1,4 @@
-Project contains 3 activities: Login, List and item.
+Project contains 4 activities: Login, List, Item and Camera.
 
 Login screen must be launched first.
 
@@ -11,7 +11,7 @@ Request permission for camera usage.
 
 Remember that permission request should be user-friendly. 
 
-When the permission is granted, plese open the CameraActivity(create it, please)
+When the permission is granted, please, open the CameraActivity.
 _____________
 
 On the ListActivity fabStartSomething must open ItemActivity.
